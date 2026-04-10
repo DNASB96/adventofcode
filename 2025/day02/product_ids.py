@@ -1,6 +1,8 @@
 import sys
 import itertools
 
+FILENAME = sys.argv[1] if len(sys.argv) > 1 else "example"
+
 def inclusive_range(start, stop):
     return range(start, stop + 1)
 
@@ -38,10 +40,8 @@ def check_product_ids(id_ranges):
                 all_invalid_products.append(product_id)
     return invalid_products, all_invalid_products
 
-filename = "input" if "input" in sys.argv else "example"
-
 # ['10-12', ...]
-data = list(map(lambda line : line.split(','), open(filename, 'r')))[0] # input is a single line
+data = list(map(lambda line : line.split(','), open(FILENAME, 'r')))[0] # input is a single line
 
 # [range(10,13), ...]
 id_ranges = list(map(lambda id_range : inclusive_range(*map(int, id_range.split('-'))), data))

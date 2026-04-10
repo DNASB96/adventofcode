@@ -10,7 +10,7 @@ def read_input():
     """
     rotations = []
     pattern = r"([RL])([0-9]+)"
-    filename = "input" if "input" in sys.argv else "example"
+    filename = sys.argv[1] if len(sys.argv) > 1 else "example"
     with open(filename, 'r') as file:
         for line in file:
             match = re.search(pattern, line)

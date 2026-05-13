@@ -4,18 +4,24 @@ This project is a collection of my solutions to [Adventofcode](https://adventofc
 
 ## Requirements
 
-Python
+Python 3
 
-## Execution
+Install the python requirements :
+
+```python
+pip install -r requirements.txt
+```
+
+## Running the scripts
 
 Run the following for the example data provided in the puzzle description.
 
 ```bash
-python3 puzzle.py
+python puzzle.py
 ```
 
 Run the following for my personal puzzle input.
 
 ```bash
-python3 puzzle.py input
+python puzzle.py input
 ```
